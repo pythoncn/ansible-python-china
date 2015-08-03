@@ -1,7 +1,9 @@
 # coding: utf-8
+from werkzeug.contrib.fixers import ProxyFix
 from flask import redirect
 from zerqu import create_app
 app = create_app()
+app.wsgi_app = ProxyFix(app.wsgi_app)
 
 
 @app.route('/topic/<int:tid>')
