@@ -1,0 +1,15 @@
+[program:{{ zerqu_app_name }}]
+command={{ zerqu_virtualenv }}/bin/gunicorn -c gunicorn_conf.py wsgi:app
+directory={{ zerqu_application }}
+environment=ZERQU_CONF="{{ zerqu_application }}/zerqu_conf.py",PYTHONPATH="{{ zerqu_source }}"
+autostart=true
+autorestart=true
+redirect_stderr = true
+stdout_logfile=/var/log/supervisor/{{ zerqu_server_name }}.log
+stopsignal=TERM
+
+stdout_logfile_maxbytes=50MB
+stdout_logfile_backups=5
+stopwaitsecs = 60
+
+killasgroup=true

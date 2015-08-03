@@ -1,0 +1,26 @@
+---
+
+- name: Create zerqu application directory
+  file: path={{ zerqu_application }} state=directory
+
+
+- name: Create zerqu application script
+  copy: src=wsgi.py dest={{ zerqu_application }}/wsgi.py
+
+
+- name: Create zerqu application config
+  template: src=zerqu_conf.j2 dest={{ zerqu_application }}/zerqu_conf.py
+
+
+- name: Add zerqu gunicorn config
+  template: src=gunicorn_conf.j2 dest={{ zerqu_application }}/gunicorn_conf.py
+
+
+- name: Add zerqu supervisor config
+  template: src=supervisor.conf.j2 dest={{ supervisor_incdir }}/{{ zerqu_app_name }}.conf
+
+
+- name: Add zerqu nginx config
+  template: src=nginx.conf.j2 dest=/etc/nginx/conf.d/{{ zerqu_server_name }}.conf
+  notify:
+    - nginx reload

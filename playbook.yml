@@ -1,0 +1,25 @@
+---
+- hosts: all
+  sudo: yes
+
+  roles:
+    - Stouts.redis
+    - Stouts.nginx
+    - Stouts.python
+    - Stouts.supervisor
+    - ANXS.postgresql
+    - zerqu
+
+  vars:
+    python_ppa: "ppa:fkrull/deadsnakes-python2.7"
+    python_versions: [2.7]
+    python_virtualenvs:
+      - path: /var/zerqu/venv
+    postgresql_ext_install_dev_headers: yes
+
+    postgresql_databases:
+      - name: pythonchina
+
+    zerqu_site_name: Python China
+    zerqu_site_styles: []
+    zerqu_site_scripts: []

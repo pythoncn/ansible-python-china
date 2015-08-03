@@ -1,0 +1,3 @@
+---
+# vars file for ansible-zerqu
+supervisor_incdir: /etc/supervisor/conf.d

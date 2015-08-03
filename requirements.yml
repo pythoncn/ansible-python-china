@@ -1,0 +1,10 @@
+- src: Stouts.redis
+  path: roles/
+- src: Stouts.nginx
+  path: roles/
+- src: Stouts.python
+  path: roles/
+- src: Stouts.supervisor
+  path: roles/
+- src: ANXS.postgresql
+  path: roles/

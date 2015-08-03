@@ -1,0 +1,15 @@
+---
+
+- name: install system packages
+  apt: pkg={{ item }} state=installed
+  with_items:
+    - build-essential
+    - libffi-dev
+    - libssl-dev
+
+- include: install.yml
+  tags: [deploy]
+
+
+- include: config.yml
+  tags: [deploy]

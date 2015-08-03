@@ -1,0 +1,23 @@
+# coding: utf-8
+
+import multiprocessing
+
+bind = '{{ zerqu_bind }}'
+workers = multiprocessing.cpu_count() * 2 + 1
+
+timeout = 30
+
+max_requests = 1000
+max_requests_jitter = 500
+
+proc_name = '{{ zerqu_app_name }}'
+
+accesslog = '-'
+errorlog = '-'
+loglevel = 'info'
+
+x_forwarded_for_header = 'X-FORWARDED-FOR'
+
+secure_scheme_headers = {
+    'X-FORWARDED-PROTO': 'https',
+}

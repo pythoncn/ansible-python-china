@@ -1,0 +1,15 @@
+---
+
+- name: Install zerqu dependencies
+  pip:
+    requirements: "{{ zerqu_source }}/requirements.txt"
+    virtualenv: "{{ zerqu_virtualenv }}"
+
+
+- name: Install gunicorn and setproctitle
+  pip:
+    name: "{{ item }}"
+    virtualenv: "{{ zerqu_virtualenv }}"
+  with_items:
+    - "gunicorn==19.3.0"
+    - "setproctitle==1.1.8"
