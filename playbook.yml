@@ -21,5 +21,7 @@
       - name: pythonchina
 
     zerqu_site_name: Python China
-    zerqu_site_styles: []
-    zerqu_site_scripts: []
+    zerqu_site_styles:
+      - //dn-python.qbox.me/qingcheng/20150803.b458fd.css
+    zerqu_site_scripts:
+      - //dn-python.qbox.me/qingcheng/20150803.e7c6f6.js

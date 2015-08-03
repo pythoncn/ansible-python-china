@@ -13,3 +13,8 @@
 
 - include: config.yml
   tags: [deploy]
+
+
+- name: Restart supervisor task
+  supervisorctl: name={{ zerqu_app_name }} state=restarted
+  tags: [deploy]

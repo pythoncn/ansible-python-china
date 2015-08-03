@@ -5,6 +5,7 @@ SQLALCHEMY_DATABASE_URI = '{{ zerqu_database_uri }}'
 SQLALCHEMY_NATIVE_UNICODE = False
 
 SITE_NAME = '{{ zerqu_site_name }}'
+SITE_DESCRIPTION = '{{ zerqu_site_description }}'
 SITE_HEADER = '''
 {% for src in zerqu_site_styles %}
 <link rel="stylesheet" href="{{ src }}">
@@ -12,7 +13,7 @@ SITE_HEADER = '''
 '''
 SITE_FOOTER = '''
 {% for src in zerqu_site_scripts %}
-<script src="{{ src }}></script>
+<script src="{{ src }}"></script>
 {% endfor %}
 '''
 

@@ -7,6 +7,8 @@ zerqu_application: "{{ zerqu_base }}/app"
 zerqu_public_dir: "{{ zerqu_base }}/public"
 
 zerqu_site_name: Python China
+zerqu_site_description: Welcome to Python China
+
 zerqu_app_name: pycn_web
 zerqu_server_name: python-china.org
 
