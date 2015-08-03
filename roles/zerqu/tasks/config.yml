@@ -16,6 +16,10 @@
   template: src=gunicorn_conf.j2 dest={{ zerqu_application }}/gunicorn_conf.py
 
 
+- name: Add zerqu newrelic config
+  template: src=newrelic.ini.j2 dest={{ zerqu_application }}/newrelic.ini
+
+
 - name: Add zerqu supervisor config
   template: src=supervisor.conf.j2 dest={{ supervisor_incdir }}/{{ zerqu_app_name }}.conf
 
