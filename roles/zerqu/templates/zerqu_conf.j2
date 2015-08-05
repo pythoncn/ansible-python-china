@@ -6,6 +6,7 @@ SQLALCHEMY_NATIVE_UNICODE = False
 
 SITE_NAME = '{{ zerqu_site_name }}'
 SITE_DESCRIPTION = '{{ zerqu_site_description }}'
+SITE_TWITTER = 'pythoncn'
 SITE_HEADER = '''
 {% for src in zerqu_site_styles %}
 <link rel="stylesheet" href="{{ src }}">
@@ -18,7 +19,7 @@ SITE_FOOTER = '''
 {% endfor %}
 '''
 
-SITE_LOGINS = ['google']
+SITE_LOGINS = []
 
 GOOGLE_CONSUMER_KEY = '{{ google_consumer_key }}'
 GOOGLE_CONSUMER_SECRET = '{{ google_consumer_secret }}'
