@@ -23,5 +23,7 @@ def redirect_node(slug):
 
 @app.route('/user/<name>')
 @app.route('/user/<name>/topics')
+@app.route('/member/<name>')
+@app.route('/~<name>')
 def redirect_user(name):
     return redirect('/u/%s' % name, code=301)
