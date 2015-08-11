@@ -6,11 +6,13 @@ zerqu_source: "{{ zerqu_base }}/src"
 zerqu_application: "{{ zerqu_base }}/app"
 zerqu_public_dir: "{{ zerqu_base }}/public"
 
-zerqu_site_name: Python China
-zerqu_site_description: Welcome to Python China
-
 zerqu_app_name: pycn_web
 zerqu_server_name: python-china.org
+
+zerqu_site_name: Python China
+zerqu_site_description: Welcome to Python China
+zerqu_site_url: "https://{{ zerqu_server_name }}"
+zerqu_site_seo_url: "http://{{ zerqu_server_name }}"
 
 zerqu_bind: "unix:/var/run/{{ zerqu_app_name }}.sock"
 zerqu_database_uri: "postgresql://postgres@localhost/pythonchina"
