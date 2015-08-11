@@ -21,9 +21,7 @@
     postgresql_databases:
       - name: pythonchina
 
-    zerqu_server_name: beta.python-china.org
     zerqu_site_name: Python China
-    zerqu_site_url: "http://beta.python-china.org"
     zerqu_site_styles:
       - //dn-python.qbox.me/qingcheng/20150810.f4f36e.css
     zerqu_site_scripts:

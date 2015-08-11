@@ -10,6 +10,10 @@ SITE_CANONICAL_URL = '{{ zerqu_site_seo_url }}'
 SITE_DESCRIPTION = '{{ zerqu_site_description }}'
 SITE_TWITTER = 'pythoncn'
 SITE_HEADER = '''
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152.png">
 {% for src in zerqu_site_styles %}
 <link rel="stylesheet" href="{{ src }}">
 {% endfor %}
