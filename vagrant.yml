@@ -1,0 +1,6 @@
+---
+
+- include: playbook.yml
+  vars:
+    zerqu_server_name: beta.python-china.org
+    zerqu_site_url: "http://{{ zerqu_server_name }}"
