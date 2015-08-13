@@ -1,5 +1,6 @@
 ---
 
+dev_mode: production
 zerqu_base: /var/zerqu
 zerqu_virtualenv: "{{ zerqu_base }}/venv"
 zerqu_source: "{{ zerqu_base }}/src"
