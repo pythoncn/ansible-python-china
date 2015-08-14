@@ -16,7 +16,6 @@
     - "raven==5.5.0"
     - "newrelic==2.54.0.41"
     - "gevent==1.0.2"
-    - "python-memcached==1.57"
 
 - name: Copy public files
   copy: src={{ item }} dest={{ zerqu_public_dir }}/

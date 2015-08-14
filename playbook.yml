@@ -5,7 +5,6 @@
 
   roles:
     - Stouts.redis
-    - Stouts.memcached
     - Stouts.nginx
     - Stouts.python
     - Stouts.supervisor
