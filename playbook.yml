@@ -5,6 +5,7 @@
 
   roles:
     - Stouts.redis
+    - Stouts.memcached
     - Stouts.nginx
     - Stouts.python
     - Stouts.supervisor
@@ -12,6 +13,7 @@
     - zerqu
 
   vars:
+    memcached_memory_limit: 100
     python_ppa: "ppa:fkrull/deadsnakes-python2.7"
     python_versions: [2.7]
     python_virtualenvs:
@@ -25,4 +27,4 @@
     zerqu_site_styles:
       - //dn-python.qbox.me/qingcheng/20150814.e287ca.css
     zerqu_site_scripts:
-      - //dn-python.qbox.me/qingcheng/20150814.b804be.js
+      - //dn-python.qbox.me/qingcheng/20150814.474d9b.js

@@ -1,5 +1,7 @@
 - src: Stouts.redis
   path: roles/
+- src: Stouts.memcached
+  path: roles/
 - src: Stouts.nginx
   path: roles/
 - src: Stouts.python
