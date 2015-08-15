@@ -1,2 +1,10 @@
 ---
 # handlers file for ansible-zerqu
+
+- name: newrelic deployment
+  newrelic_deployment:
+    token: "{{ newrelic_api_key }}"
+    app_name: Python China
+    user: lepture
+    revision: "{{ deploy_revision }}"
+    description: "{{ deploy_message }}"

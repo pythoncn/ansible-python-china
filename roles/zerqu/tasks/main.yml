@@ -17,4 +17,6 @@
 
 - name: Restart supervisor task
   supervisorctl: name={{ zerqu_app_name }} state=restarted
+  notify:
+    - newrelic deployment
   tags: [deploy]
