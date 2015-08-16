@@ -1,12 +1,14 @@
 ---
 
-- name: Install zerqu dependencies
-  pip:
-    requirements: "{{ zerqu_source }}/requirements.txt"
-    virtualenv: "{{ zerqu_virtualenv }}"
+- name: install system packages
+  apt: pkg={{ item }} state=installed
+  with_items:
+    - build-essential
+    - libffi-dev
+    - libssl-dev
 
 
-- name: Install gunicorn and setproctitle
+- name: Install deployment dependencies
   pip:
     name: "{{ item }}"
     virtualenv: "{{ zerqu_virtualenv }}"
@@ -16,6 +18,7 @@
     - "raven==5.5.0"
     - "newrelic==2.54.0.41"
     - "gevent==1.0.2"
+
 
 - name: Copy public files
   copy: src={{ item }} dest={{ zerqu_public_dir }}/

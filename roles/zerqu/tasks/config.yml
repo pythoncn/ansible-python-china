@@ -1,5 +1,12 @@
 ---
 
+
+- name: Install zerqu dependencies
+  pip:
+    requirements: "{{ zerqu_source }}/requirements.txt"
+    virtualenv: "{{ zerqu_virtualenv }}"
+
+
 - name: Create zerqu application directory
   file: path={{ zerqu_application }} state=directory
 
