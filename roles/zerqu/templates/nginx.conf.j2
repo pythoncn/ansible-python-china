@@ -13,12 +13,17 @@ server {
 
   root {{ zerqu_public_dir }};
 
+  # security headers
+  add_header X-XSS-Protection "1; mode=block";
+
   location ~* ^/[^\/]+\.(gif|jpg|jpeg|png|txt|ico)$ {
     expires 10d;
   }
 
-  # security headers
-  add_header X-XSS-Protection "1; mode=block";
+  location /assets/ {
+    add_header Access-Control-Allow-Origin "*";
+    expires 10d;
+  }
 
   location / {
     proxy_pass http://{{ zerqu_app_name }};
