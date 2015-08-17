@@ -7,8 +7,16 @@
   tags: [deploy]
 
 
+- name: newrelic deployment
+  newrelic_deployment:
+    token: "{{ newrelic_api_key }}"
+    app_name: Python China
+    user: lepture
+    revision: "{{ deploy_revision }}"
+    description: "{{ deploy_message }}"
+  when: server_mode == 'production'
+
+
 - name: Restart supervisor task
   supervisorctl: name={{ zerqu_app_name }} state=restarted
-  notify:
-    - newrelic deployment
   tags: [deploy]
