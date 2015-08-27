@@ -15,6 +15,7 @@
     revision: "{{ deploy_revision }}"
     description: "{{ deploy_message }}"
   when: server_mode == 'production'
+  tags: [deploy]
 
 
 - name: Restart supervisor task

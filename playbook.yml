@@ -12,7 +12,6 @@
     - zerqu
 
   vars:
-    memcached_memory_limit: 100
     python_ppa: "ppa:fkrull/deadsnakes-python2.7"
     python_versions: [2.7]
     python_virtualenvs:
@@ -24,6 +23,6 @@
 
     zerqu_site_name: Python China
     zerqu_site_styles:
-      - //dn-python.qbox.me/qingcheng/20150814.e287ca.css
+      - //dn-python.qbox.me/qingcheng/20150827.1e4918.css
     zerqu_site_scripts:
-      - /assets/20150817.def87d.js
+      - /assets/20150827.c4a591.js
