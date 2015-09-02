@@ -1,6 +1,8 @@
 ---
 
 server_mode: production
+zerqu_user: www-data
+
 zerqu_base: /var/zerqu
 zerqu_virtualenv: "{{ zerqu_base }}/venv"
 zerqu_source: "{{ zerqu_base }}/src"
@@ -15,5 +17,5 @@ zerqu_site_description: Welcome to Python China
 zerqu_site_url: "https://{{ zerqu_server_name }}"
 zerqu_site_seo_url: "http://{{ zerqu_server_name }}"
 
-zerqu_bind: "unix:/var/run/{{ zerqu_app_name }}.sock"
+zerqu_bind: "127.0.0.1:9011"
 zerqu_database_uri: "postgresql://postgres@localhost/pythonchina"

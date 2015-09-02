@@ -6,7 +6,7 @@ SQLALCHEMY_NATIVE_UNICODE = False
 
 BABEL_DEFAULT_LOCALE = 'zh'
 BABEL_LOCALES = ['zh']
-GOOGLE_ANALYTICS ='UA-29729598-1'
+GOOGLE_ANALYTICS = 'UA-29729598-1'
 
 SITE_NAME = '{{ zerqu_site_name }}'
 SITE_URL = '{{ zerqu_site_url }}'
@@ -21,7 +21,7 @@ SITE_HEADER = '''
 {% for src in zerqu_site_styles %}
 <link rel="stylesheet" href="{{ src }}">
 {% endfor %}
-<script>ZERQU.GA='{{ GOOGLE_ANALYTICS }}'</script>
+<script>ZERQU.GA='UA-29729598-1'</script>
 '''
 SITE_FOOTER = '''
 {% for src in zerqu_site_scripts %}
