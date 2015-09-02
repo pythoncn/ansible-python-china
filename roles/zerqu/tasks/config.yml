@@ -3,7 +3,13 @@
 
 - name: Install zerqu dependencies
   pip:
-    requirements: "{{ zerqu_source }}/requirements.txt"
+    requirements: "{{ zerqu_source }}/deps/requirements.txt"
+    virtualenv: "{{ zerqu_virtualenv }}"
+
+
+- name: Install zerqu extra dependencies
+  pip:
+    requirements: "{{ zerqu_source }}/deps/extra.txt"
     virtualenv: "{{ zerqu_virtualenv }}"
 
 

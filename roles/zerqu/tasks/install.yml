@@ -13,11 +13,13 @@
     name: "{{ item }}"
     virtualenv: "{{ zerqu_virtualenv }}"
   with_items:
-    - "gunicorn==19.3.0"
-    - "setproctitle==1.1.8"
-    - "raven==5.5.0"
     - "newrelic==2.54.0.41"
-    - "gevent==1.0.2"
+
+
+- name: Install zerqu production dependencies
+  pip:
+    requirements: "{{ zerqu_source }}/deps/production.txt"
+    virtualenv: "{{ zerqu_virtualenv }}"
 
 
 - name: Copy public files
