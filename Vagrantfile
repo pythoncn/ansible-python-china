@@ -19,6 +19,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.synced_folder "../zerqu", "/var/zerqu/src"
+  config.vm.synced_folder "../zerqu", "/home/vagrant/zerqu"
 
   # config.vm.provision :shell, inline: $script
 
