@@ -27,3 +27,12 @@ def redirect_node(slug):
 @app.route('/~<name>')
 def redirect_user(name):
     return redirect('/u/%s' % name.lower(), code=301)
+
+
+@app.route('/c/flask')
+@app.route('/c/june')
+@app.route('/c/tornado')
+@app.route('/c/django')
+@app.route('/c/gae')
+def redirect_to_web():
+    return redirect('/c/web', code=301)
