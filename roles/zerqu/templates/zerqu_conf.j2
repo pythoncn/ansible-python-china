@@ -15,6 +15,10 @@ SITE_DESCRIPTION = '{{ zerqu_site_description }}'
 SITE_LOGO = '/apple-touch-icon-152.png'
 SITE_TWITTER = 'pythoncn'
 SITE_HEADER = '''
+<meta name="msvalidate.01" content="0DAEBE9EB79B1E1BC183B60FA52FAAE9">
+'''
+
+APP_HEADER = '''
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76.png">
 <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120.png">
@@ -27,13 +31,14 @@ SITE_HEADER = '''
 {% endfor %}
 <script>ZERQU.GA='UA-29729598-1'</script>
 '''
-SITE_FOOTER = '''
+
+APP_FOOTER = '''
 {% for src in zerqu_site_scripts %}
 <script src="{{ src }}" crossorigin="anonymous"></script>
 {% endfor %}
 '''
 
-SITE_LOGINS = ['google']
+APP_LOGINS = ['google']
 
 # async mode
 ZERQU_ASYNC = True
