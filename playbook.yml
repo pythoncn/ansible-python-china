@@ -23,6 +23,8 @@
 
     zerqu_site_name: Python China
     zerqu_site_styles:
-      - //dn-python.qbox.me/qingcheng/20151012.3cab19.css
+      - //dn-python.qbox.me/qingcheng/20151023.vendor.7e4de9.css
+      - //dn-python.qbox.me/qingcheng/20151023.app.bc35aa.css
     zerqu_site_scripts:
-      - //dn-python.qbox.me/qingcheng/20151012.00a164.js
+      - //dn-python.qbox.me/qingcheng/20151023.vendor.8415fc.js
+      - //dn-python.qbox.me/qingcheng/20151023.app.40294e.js
