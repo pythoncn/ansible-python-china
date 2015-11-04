@@ -2,7 +2,9 @@
 from werkzeug.contrib.fixers import ProxyFix
 from flask import redirect
 from zerqu import create_app
+from zerqu.ext.sentry import FlaskSentry
 app = create_app()
+FlaskSentry(app, logging=False, wrap_wsgi=False)
 app.wsgi_app = ProxyFix(app.wsgi_app)
 
 
