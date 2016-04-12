@@ -23,8 +23,8 @@
 
     zerqu_site_name: Python China
     zerqu_site_styles:
-      - //dn-python.qbox.me/qingcheng/20160116.vendor.7e4de9.css
-      - //dn-python.qbox.me/qingcheng/20160116.app.69ac49.css
+      - //dn-python.qbox.me/qingcheng/20160412.vendor.7e4de9.css
+      - //dn-python.qbox.me/qingcheng/20160412.app.0fdf2a.css
     zerqu_site_scripts:
-      - //dn-python.qbox.me/qingcheng/20160116.vendor.2b287e.js
-      - //dn-python.qbox.me/qingcheng/20160116.app.a2e838.js
+      - //dn-python.qbox.me/qingcheng/20160412.vendor.2b287e.js
+      - //dn-python.qbox.me/qingcheng/20160412.app.3db66f.js
